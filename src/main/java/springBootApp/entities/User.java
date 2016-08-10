@@ -22,7 +22,8 @@ public class User {
 
     // Public methods
 
-    public User() { }
+    public User() {
+    }
 
     public User(long id) {
         this.id = id;
@@ -55,5 +56,11 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User [userid=" + id + ", Name=" + name
+                + ",  email=" + email + "]";
     }
 }

@@ -25,17 +25,17 @@ public class JsonRestController {
                 "DELETE USER: /rest/deleteUser?id=[id]<br><br><br><br>";
     }
 
-    @RequestMapping("/rest/createUser")
-    public String create(String email, String name) {
-        try {
-            User user = new User(email, name);
-            userDao.save(user);
-            return "User "+user.getId()+" created!";
-        }
-        catch (Exception e) {
-            return "Error creating user: " + e.toString();
-        }
-    }
+//    @RequestMapping("/rest/createUser")
+//    public String create(String email, String name) {
+//        try {
+//            User user = new User(email, name);
+//            userDao.save(user);
+//            return "User "+user.getId()+" created!";
+//        }
+//        catch (Exception e) {
+//            return "Error creating user: " + e.toString();
+//        }
+//    }
 
     // this method will create this object into a json
     @RequestMapping("/rest/getAllUsers")
